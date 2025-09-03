@@ -57,7 +57,7 @@ def proprocess_documnents(google_key, all_docs):
                                       chunk_overlap=0,
                                       separators=["\n\n", "\n", ".", " ", ""])
     chuncks = text_splitter.split_documents(all_docs)
-    gembeddings = GoogleGenerativeAIEmbeddings(model="gemini-embedding-001",
+    gembeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001",
                                             google_api_key=google_key,
                                             task_type="RETRIEVAL_DOCUMENT")
     db_name = "google_embeddings"
@@ -196,4 +196,5 @@ with st.form("chat_form"):
         else:
 
             st.warning("Please enter a question before submitting.")
+
 

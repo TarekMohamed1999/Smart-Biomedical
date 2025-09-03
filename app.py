@@ -15,7 +15,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationalRetrievalChain
 import os
-import gradio as gr
+# import gradio as gr
 from glob import glob
 from langchain_community.document_loaders import DirectoryLoader, TextLoader, PyPDFLoader
 from langchain.text_splitter import CharacterTextSplitter
@@ -194,4 +194,5 @@ with st.form("chat_form"):
             except Exception as e:
                 st.error(f"Error: {e}")
         else:
+
             st.warning("Please enter a question before submitting.")
